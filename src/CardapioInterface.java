@@ -46,7 +46,7 @@ public class CardapioInterface extends JFrame {
         painel.setBackground(new Color(41, 128, 185));
         painel.setPreferredSize(new Dimension(0, 70));
 
-        JLabel titulo = new JLabel("🍽️ CARDÁPIO DIGITAL");
+        JLabel titulo = new JLabel("CARDÁPIO DIGITAL");
         titulo.setFont(new Font("Arial", Font.BOLD, 32));
         titulo.setForeground(Color.WHITE);
 
@@ -105,7 +105,7 @@ public class CardapioInterface extends JFrame {
         painel.setLayout(new BoxLayout(painel, BoxLayout.Y_AXIS));
         painel.setBorder(BorderFactory.createTitledBorder(
                 BorderFactory.createLineBorder(new Color(46, 204, 113), 2),
-                "➕ Inserir Prato",
+                "Inserir Prato",
                 0, 0, new Font("Arial", Font.BOLD, 14)));
 
         txtNome = new JTextField(20);
@@ -134,7 +134,7 @@ public class CardapioInterface extends JFrame {
         painel.setLayout(new BoxLayout(painel, BoxLayout.Y_AXIS));
         painel.setBorder(BorderFactory.createTitledBorder(
                 BorderFactory.createLineBorder(new Color(230, 126, 34), 2),
-                "🔍 Buscar/Remover Prato",
+                "Buscar/Remover Prato",
                 0, 0, new Font("Arial", Font.BOLD, 14)));
 
         txtBuscar = new JTextField(20);
@@ -160,7 +160,7 @@ public class CardapioInterface extends JFrame {
         painel.setLayout(new BoxLayout(painel, BoxLayout.Y_AXIS));
         painel.setBorder(BorderFactory.createTitledBorder(
                 BorderFactory.createLineBorder(new Color(155, 89, 182), 2),
-                "📊 Ordenar Cardápio",
+                "Ordenar Cardápio",
                 0, 0, new Font("Arial", Font.BOLD, 14)));
 
         cbCriterio = new JComboBox<>(new String[]{"Nome", "Preço", "Tempo"});
@@ -477,9 +477,9 @@ public class CardapioInterface extends JFrame {
         cardapio.inserir(new Prato("Salmão Grelhado", 65.00, 25, "Peixes"));
         cardapio.inserir(new Prato("Risoto de Funghi", 42.00, 35, "Massas"));
         cardapio.inserir(new Prato("Tilápia Assada", 38.00, 30, "Peixes"));
-        cardapio.inserir(new Prato("Strogonoff de Frango", 32.00, 30, "Prato Principal"));
+        cardapio.inserir(new Prato("Strogonoff de Frango", 32.00, 60, "Prato Principal"));
         cardapio.inserir(new Prato("Hambúrguer Artesanal", 28.00, 20, "Lanches"));
-        cardapio.inserir(new Prato("Pizza Margherita", 45.00, 25, "Pizzas"));
+        cardapio.inserir(new Prato("Pizza Margherita", 45.00, 28, "Pizzas"));
         cardapio.inserir(new Prato("Salada Caesar", 22.00, 10, "Saladas"));
     }
 
