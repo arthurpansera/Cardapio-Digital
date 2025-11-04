@@ -9,7 +9,6 @@ public class TabelaHash {
     private int tamanho;
     private int numeroElementos;
 
-    @SuppressWarnings("unchecked")
     public TabelaHash() {
         this.tamanho = TAMANHO_INICIAL;
         this.tabela = new LinkedList[tamanho];
@@ -86,7 +85,6 @@ public class TabelaHash {
         return vetor;
     }
 
-    @SuppressWarnings("unchecked")
     private void redimensionar() {
         int novoTamanho = tamanho * 2;
         LinkedList<Prato>[] novaTabela = new LinkedList[novoTamanho];

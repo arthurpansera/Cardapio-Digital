@@ -44,25 +44,6 @@ public class Prato {
         this.categoria = categoria;
     }
 
-    @Override
-    public String toString() {
-        return String.format("%s - R$ %.2f - %d min - %s",
-                nome, preco, tempoPreparo, categoria);
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Prato prato = (Prato) obj;
-        return nome.equalsIgnoreCase(prato.nome);
-    }
-
-    @Override
-    public int hashCode() {
-        return nome.toLowerCase().hashCode();
-    }
-
     public Object[] toTableRow() {
         return new Object[]{nome, String.format("R$ %.2f", preco),
                 tempoPreparo + " min", categoria};
