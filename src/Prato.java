@@ -16,37 +16,37 @@ public class Prato {
         return nome;
     }
 
-    public double getPreco() {
-        return preco;
-    }
-
-    public int getTempoPreparo() {
-        return tempoPreparo;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public double getPreco() {
+        return preco;
     }
 
     public void setPreco(double preco) {
         this.preco = preco;
     }
 
+    public int getTempoPreparo() {
+        return tempoPreparo;
+    }
+
     public void setTempoPreparo(int tempoPreparo) {
         this.tempoPreparo = tempoPreparo;
+    }
+
+    public String getCategoria() {
+        return categoria;
     }
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
 
-    public Object[] toTableRow() {
-        return new Object[]{nome, String.format("R$ %.2f", preco),
-                tempoPreparo + " min", categoria};
+    // Retorna os dados do prato como uma linha para exibição na tabela
+    public Object[] linhaTabela() {
+        return new Object[]{nome, String.format("R$ %.2f", preco), tempoPreparo + " min", categoria};
     }
 
 }

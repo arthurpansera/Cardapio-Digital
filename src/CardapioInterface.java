@@ -19,7 +19,7 @@ public class CardapioInterface extends JFrame {
     }
 
     private void inicializarInterface() {
-        setTitle("Cardápio Digital - Gestão de Pratos");
+        setTitle("Cardápio Digital");
         setSize(1200, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
@@ -445,7 +445,7 @@ public class CardapioInterface extends JFrame {
         Prato[] pratos = cardapio.exportarParaVetor();
 
         for (Prato prato : pratos) {
-            modeloTabela.addRow(prato.toTableRow());
+            modeloTabela.addRow(prato.linhaTabela());
         }
     }
 
@@ -453,7 +453,7 @@ public class CardapioInterface extends JFrame {
         modeloTabela.setRowCount(0);
 
         for (Prato prato : pratos) {
-            modeloTabela.addRow(prato.toTableRow());
+            modeloTabela.addRow(prato.linhaTabela());
         }
     }
 
@@ -484,10 +484,8 @@ public class CardapioInterface extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            CardapioInterface frame = new CardapioInterface();
-            frame.setVisible(true);
-        });
+        CardapioInterface frame = new CardapioInterface();
+        frame.setVisible(true);
     }
 
 }
