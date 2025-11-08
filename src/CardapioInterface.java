@@ -330,9 +330,16 @@ public class CardapioInterface extends JFrame {
             return;
         }
 
-        int confirmacao = JOptionPane.showConfirmDialog(this,
+        Object[] opcoes = {"SIM", "NÃO"};
+        int confirmacao = JOptionPane.showOptionDialog(this,
                 "Deseja realmente remover o prato '" + nome + "'?",
-                "Confirmar Remoção", JOptionPane.YES_NO_OPTION);
+                "Confirmar Remoção",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                opcoes,
+                opcoes[0]
+        );
 
         if (confirmacao == JOptionPane.YES_OPTION) {
             if (cardapio.remover(nome)) {
